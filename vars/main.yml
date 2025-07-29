@@ -1,23 +1,10 @@
 ---
-gri_archive_formats:
-  # pack drops architecture on amd64, making a custom override necessary
-  # example resolutions:
-  # pack-v0.34.2-linux.tgz
-  # pack-v0.34.2-linux-arm64.tgz
-  pack: |
-    {{- app_repo }}{{ app_separator }}{{ app.tag }}{{ app_separator }}{{ gri_os -}}
-    {% if 'amd64' != gri_arch %}
-    {{ app_separator }}{{ gri_arch -}}
-    {% endif %}
-    .{{ app_archive_extension -}}
 gri_checksum_formats:
-  # pack publishes a separate sha256 checksum file per archive instead of a checksums.txt
-  pack: '{{ app_archive_format }}.sha256'
+  qq: '{{ app_archive_format }}.md5'
 gri_installs:
-  # https://github.com/buildpacks/pack/releases
-  - repo: buildpacks/pack
-    archive_extension: tgz
-    archive_key: pack
-    checksum_key: pack
+  - repo: JFryy/qq
+    archive_extension: .tgz.gz
+#    archive_key: pack
+    checksum_key: qq
     separator: '-'
-    tag: '{{ pack_version }}'
+    tag: '{{ qq_version }}'
