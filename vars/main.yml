@@ -3,8 +3,7 @@ gri_checksum_formats:
   qq: '{{ app_archive_format }}.md5'
 gri_installs:
   - repo: JFryy/qq
-    archive_extension: .tgz.gz
-#    archive_key: pack
+    archive_extension: .tar.gz
     checksum_key: qq
     separator: '-'
     tag: '{{ qq_version }}'
