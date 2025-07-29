@@ -1,2 +1,2 @@
-# Ansible Role Pack
-- Installs [pack](https://github.com/buildpacks/pack)
+# Ansible Role qq
+- Installs [qq](https://github.com/JFryy/qq)
