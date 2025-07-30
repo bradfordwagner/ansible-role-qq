@@ -1,22 +1,6 @@
 target_repo: ""
 flavor: ansible_role
 builds:
-    - os: alpine_3.19
-      archs:
-        - linux/amd64
-        - linux/arm64
-    - os: alpine_3.20
-      archs:
-        - linux/amd64
-        - linux/arm64
-    - os: alpine_3.21
-      archs:
-        - linux/amd64
-        - linux/arm64
-    - os: alpine_3.22
-      archs:
-        - linux/amd64
-        - linux/arm64
     - os: archlinux_latest
       archs:
         - linux/amd64
