@@ -1,15 +1,12 @@
 ---
-gri_checksum_formats:
-  qq: '{{ app_archive_format }}.md5'
 gri_installs:
   # https://github.com/JFryy/qq/releases/
   # does not run on arch or linux amd64
+  # v0.4.0 dropped per-asset .md5 sidecars for a single sha256 checksums.txt,
+  # which the installer defaults already expect — so no checksum_* overrides here.
   - repo: JFryy/qq
     archive_extension: .tar.gz
     unarchive_format: unarchive
-    checksum_key: qq
     separator: '-'
-    checksum_algo: md5
-    checksum_resolve_type: single
     tag: '{{ qq_version }}'
 
