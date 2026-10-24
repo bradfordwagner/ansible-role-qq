@@ -1,11 +1,11 @@
 galaxy_info:
-  role_name: pack
+  role_name: qq
   author: Bradford Wagner
-  description: installs pack cli
+  description: installs qq cli
   company: Blackrock Financial Management
   license: Apache-2.0
   min_ansible_version: 2.1
-  galaxy_tags: [cnb,pack]
+  galaxy_tags: [qq, jq, yaml]
 
 dependencies:
   - bradfordwagner.go-releaser-install
